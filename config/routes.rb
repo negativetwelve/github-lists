@@ -4,8 +4,8 @@ GitLists::Application.routes.draw do
   match "about", to: "pages#about", via: :get
 
   devise_for :users, path: '',
-                     path_names: { sign_in: 'login', sign_up: 'sign_up', sign_out: 'logout'}
+                     path_names: { sign_in: 'login', sign_up: 'sign_up', sign_out: 'logout'},
+                     controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
-  match 'auth/:provider/callback', to: 'sessions#create_github'
-  match 'auth/failure', to: redirect('/')
+
 end
