@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'google-analytics-rails', '~> 0.0.5'
 gem 'devise', '~> 3.2.3'
 gem 'simple_form', '~> 3.0.1'
+gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 
 group :doc do
   gem 'sdoc', require: false
@@ -28,10 +29,11 @@ group :development, :test do
   gem 'factory_girl', '~> 4.4.0'
   gem 'rails_best_practices', '~> 1.15.1'
   gem 'rspec-rails', '~> 2.14.1'
-  # Rename Rails 4 app
-  gem "rails-rename", "~> 1.0.0"
 end
 
 group :production do
   gem 'rails_12factor'
 end
+
+# Rename Rails 4 app
+gem "rails-rename", "~> 1.0.0"
