@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RailsStarterApp::Application.load_tasks
+GitLists::Application.load_tasks
