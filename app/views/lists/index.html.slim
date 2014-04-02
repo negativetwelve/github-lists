@@ -1,0 +1,7 @@
+.container
+  .row
+    .col-md-12
+      h1 Top Lists
+      - @lists.each do |list|
+        .list-item
+          = link_to list.name, list
