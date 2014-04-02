@@ -8,5 +8,7 @@ GitLists::Application.routes.draw do
                      controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :users
+  resources :lists
+  resources :repos
 
 end
