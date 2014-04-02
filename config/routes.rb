@@ -7,5 +7,6 @@ GitLists::Application.routes.draw do
                      path_names: { sign_in: 'login', sign_up: 'sign_up', sign_out: 'logout'},
                      controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
+  resources :users
 
 end
