@@ -12,6 +12,7 @@ nav.navbar.navbar-default.navbar-fixed-top role="navigation"
         = active_li_link "Home", root_path
         = active_li_link "About", about_path
         = active_li_link "Top Lists", lists_path
+        = active_li_link "Top Repos", repos_path
         - if content_for?(:header_links)
           = render partial: yield(:header_links)
       ul.nav.navbar-nav.navbar-right

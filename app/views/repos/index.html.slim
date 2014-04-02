@@ -1,0 +1,8 @@
+.container
+  .row
+    .col-md-12
+      h1 Top Repos
+
+      - @repos.each do |repo|
+        .repo-item
+          = link_to repo.name, repo
