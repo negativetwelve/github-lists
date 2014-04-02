@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+user = User.first
+
+list = List.create!(name: "Best Repos on GitHub", description: "A collection of the best repos on GitHub", user: user)
+
+repo = Repo.create!(name: "markmiyashita.com", description: "Best website ever", url: "https://github.com/negativetwelve/markmiyashita.com", private: false)
+
+list.repos << repo

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:github]
 
+  has_many :lists
+
   def self.find_for_github_oauth(auth)
     puts auth
     puts auth.extra

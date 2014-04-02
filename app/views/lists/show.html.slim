@@ -1,0 +1,9 @@
+.container
+  .row
+    .col-md-12
+      h1 = @list.name
+      h3 = @list.description
+
+      - @list.repos.each do |repo|
+        .repo-item
+          = link_to repo.name, repo
